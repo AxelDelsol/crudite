@@ -5,7 +5,7 @@ The main goal is to be able to develop a simple CRUD API and deploy it on a Kube
 
 Progress:
 
-* [ ] Build the API
+* [x] Build the API
 * [ ] Create a kubernetes cluster
 * [ ] Add CRUD routes (API update)
 * [ ] Deploy the API (cluster update)
