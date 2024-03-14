@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: test-job
+spec:
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+      - name: test
+        image: curlimages/curl:8.6.0
+        command: ['sh', '-c', 'curl http://${CRUDITE_SERVICE_SERVICE_HOST}:${CRUDITE_SERVICE_SERVICE_PORT}/ding']
