@@ -5,4 +5,4 @@ It does not have an ending and new requirements will be added as time goes by.
 
 ## Requirements
 
-- [ ] Create a small API to manage ingredients
+- [ ] Create a small API to manage teas
