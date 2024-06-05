@@ -1,13 +1,15 @@
 from typing import Dict, Optional
 
 import pytest
+from fastapi import status
 from fastapi.testclient import TestClient
-from httpx import Response
 
 from crudite.main import app
 from crudite.tea.dependencies import get_tea_store
 from crudite.tea.models import Tea
 from crudite.tea.store import TeaStore
+
+from .asserts import *
 
 
 @pytest.fixture
@@ -26,16 +28,18 @@ app.dependency_overrides[get_tea_store] = override_get_tea_store
 class TestTea:
     def test_get_tea_returns_tea_1(self, test_client: TestClient):
         response = test_client.get("/teas/1")
+
+        assert_status_code(response, status.HTTP_200_OK)
         assert_tea(response, Tea(name="Green", quantity=23))
 
     def test_get_tea_returns_tea_2(self, test_client: TestClient):
         response = test_client.get("/teas/2")
+        assert_status_code(response, status.HTTP_200_OK)
         assert_tea(response, Tea(name="Apple", quantity=9))
 
-
-def assert_tea(response: Response, expected_tea: Tea):
-    actual_tea = Tea(**response.json())
-    assert actual_tea == expected_tea
+    def test_unknown_tea_returns_404(self, test_client: TestClient):
+        response = test_client.get("/teas/42")
+        assert_status_code(response, status.HTTP_404_NOT_FOUND)
 
 
 class InMemoryTeaStore:
@@ -43,4 +47,4 @@ class InMemoryTeaStore:
         self.mapping = mapping
 
     def get_tea(self, tea_id: str) -> Optional[Tea]:
-        return self.mapping[tea_id]
+        return self.mapping.get(tea_id, None)

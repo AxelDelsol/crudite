@@ -16,4 +16,4 @@ class FileTeaStore:
             self.data[key] = Tea(**value)
 
     def get_tea(self, tea_id: str) -> Optional[Tea]:
-        return self.data[tea_id]
+        return self.data.get(tea_id, None)
