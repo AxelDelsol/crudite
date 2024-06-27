@@ -77,6 +77,9 @@ class TeaStore(Protocol):
 
 class InMemoryTeaStore:
     def __init__(self, *args: Tea) -> None:
+        self.set_teas(*args)
+
+    def set_teas(self, *args: Tea) -> None:
         self.mapping = {tea.id: tea for tea in args}
 
     def get_tea(self, tea_id: str) -> Optional[Tea]:
@@ -103,9 +106,12 @@ class InMemoryTeaStore:
             return updated_tea
 
 
+store = InMemoryTeaStore()
+
+
 @cache
 def get_tea_store() -> TeaStore:
-    return InMemoryTeaStore()
+    return store
 
 
 router = APIRouter()

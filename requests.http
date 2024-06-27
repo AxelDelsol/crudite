@@ -1,0 +1,16 @@
+### Extension: REST Client
+
+###
+GET http://127.0.0.1:8000/teas/1
+
+###
+POST http://127.0.0.1:8000/teas/
+content-type: application/json
+
+{
+    "name": "Test Tea",
+    "quantity": 42
+}
+
+###
+GET http://127.0.0.1:8000/teas
