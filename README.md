@@ -6,6 +6,7 @@ It does not have an ending and new requirements will be added as time goes by.
 ## Requirements
 
 - [x] Create a small API to manage teas
+- [ ] Create a UI to interact with the Tea API using no framework
 
 ## Learnings / Thoughts
 
