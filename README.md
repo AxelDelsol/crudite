@@ -5,12 +5,14 @@ It does not have an ending and new requirements will be added as time goes by.
 
 ## Requirements
 
-- [x] Create a small API to manage teas
-- [ ] Create a UI to interact with the Tea API using no framework
+- [x] Create a small API to manage teas in Python
+- [ ] Redo it in C# using ASP.NET
+- [ ] Same in Go
+- [ ] Compare implementations
 
 ## Learnings / Thoughts
 
-### Create a small API to manage teas
+### Create a small API to manage teas in Python
 
 * FastAPI is an interesting web framework that fits between Django and Flask
 * Designing / Building the API with TDD is easy but beware of dependencies overrides
