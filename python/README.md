@@ -1,7 +1,7 @@
 # Getting started
 
 ```shell
-cd api
+cd python
 poetry shell
 poetry install
 ```
