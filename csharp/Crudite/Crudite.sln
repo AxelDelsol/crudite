@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35208.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crudite", "Crudite\Crudite.csproj", "{120EC1A5-0980-4A9D-AFA0-171DC11F4AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crudite.Test", "Crudite.Test\Crudite.Test.csproj", "{96D21F04-A991-4D05-B60C-C22B7E3187A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{120EC1A5-0980-4A9D-AFA0-171DC11F4AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120EC1A5-0980-4A9D-AFA0-171DC11F4AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120EC1A5-0980-4A9D-AFA0-171DC11F4AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120EC1A5-0980-4A9D-AFA0-171DC11F4AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96D21F04-A991-4D05-B60C-C22B7E3187A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96D21F04-A991-4D05-B60C-C22B7E3187A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96D21F04-A991-4D05-B60C-C22B7E3187A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96D21F04-A991-4D05-B60C-C22B7E3187A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3530F2D1-8134-45EE-9B64-AEFC91175648}
+	EndGlobalSection
+EndGlobal

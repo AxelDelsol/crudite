@@ -1,0 +1,29 @@
+@Crudite_HostAddress = http://localhost:5177
+
+GET {{Crudite_HostAddress}}/teas
+Accept: application/json
+
+###
+GET {{Crudite_HostAddress}}/teas/2
+Accept: application/json
+
+###
+POST {{Crudite_HostAddress}}/teas
+content-type: application/json
+
+{
+    "name": "Test Tea",
+    "quantity": 42
+}
+
+###
+PATCH {{Crudite_HostAddress}}/teas/1
+content-type: application/json
+
+{
+    "id" : 1,
+    "quantity": 12
+}
+
+###
+DELETE {{Crudite_HostAddress}}/teas/1
