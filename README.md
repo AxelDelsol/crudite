@@ -7,8 +7,6 @@ It does not have an ending and new requirements will be added as time goes by.
 
 - [x] Create a small API to manage teas in Python
 - [x] Redo it in C# using ASP.NET Core
-- [ ] Same in Go
-- [ ] Compare implementations
 
 ## Learnings / Thoughts
 
